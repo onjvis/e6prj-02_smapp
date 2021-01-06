@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="dk.au671048.e6prj02.app.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/loginToRegister"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/loginToWarningList"
+            app:destination="@id/warningListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="dk.au671048.e6prj02.app.ui.register.RegisterFragment"
+        android:label="register_fragment"
+        tools:layout="@layout/register_fragment" >
+        <action
+            android:id="@+id/registerToWarningList"
+            app:destination="@id/warningListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/binListFragment"
+        android:name="dk.au671048.e6prj02.app.ui.bin_list.BinListFragment"
+        android:label="bin_list_fragment"
+        tools:layout="@layout/bin_list_fragment" >
+        <action
+            android:id="@+id/binListToBinDetail"
+            app:destination="@id/binDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/warningListFragment"
+        android:name="dk.au671048.e6prj02.app.ui.warning_list.WarningListFragment"
+        android:label="warning_list_fragment"
+        tools:layout="@layout/warning_list_fragment" >
+        <action
+            android:id="@+id/warningListToWarningDetail"
+            app:destination="@id/warningDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeListFragment"
+        android:name="dk.au671048.e6prj02.app.ui.route.RouteListFragment"
+        android:label="route_list_fragment"
+        tools:layout="@layout/route_list_fragment" >
+        <action
+            android:id="@+id/routeListToRouteDetail"
+            app:destination="@id/routeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeDetailFragment"
+        android:name="dk.au671048.e6prj02.app.ui.route.RouteDetailFragment"
+        android:label="route_detail_fragment"
+        tools:layout="@layout/route_detail_fragment" >
+        <action
+            android:id="@+id/routeDetailToBinDetail"
+            app:destination="@id/binDetailFragment" />
+        <argument
+            android:name="routeID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/warningDetailFragment"
+        android:name="dk.au671048.e6prj02.app.ui.warning_list.WarningDetailFragment"
+        android:label="warning_detail_fragment"
+        tools:layout="@layout/warning_detail_fragment" >
+
+        <argument
+            android:name="warningID"
+            app:argType="string" />
+        <action
+            android:id="@+id/warningDetailToBinDetail"
+            app:destination="@id/binDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/binDetailFragment"
+        android:name="dk.au671048.e6prj02.app.ui.bin_list.BinDetailFragment"
+        android:label="bin_detail_fragment"
+        tools:layout="@layout/bin_detail_fragment">
+
+        <argument
+            android:name="binID"
+            app:argType="string"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">E6PRJ-02 SMAPP</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="register">Register</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="dashboard">Dashboard</string>
+    <string name="bin_list">Bins</string>
+    <string name="warning_list">Warnings</string>
+    <string name="route_list">Routes</string>
+
+    <string name="error_passwords_match">Passwords do not match!</string>
+    <string name="go_to_bin_detail">Go to bin detail</string>
+    <string name="bin">Bin</string>
+    <string name="show_on_map">Show on map</string>
+    <string name="number_of_bins_on_route">Number of bins on route:</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="icon">Icon</string>
+</resources>

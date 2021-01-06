@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/binListFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_delete_outline_24"
+        android:title="@string/bin_list" />
+    <item
+        android:id="@+id/warningListFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_warning_24"
+        android:title="@string/warning_list" />
+    <item
+        android:id="@+id/routeListFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_directions_24"
+        android:title="@string/route_list" />
+</menu>

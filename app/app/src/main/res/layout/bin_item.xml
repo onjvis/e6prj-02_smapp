@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bin_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/bin_item_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_delete_outline_24"
+        tools:srcCompat="@drawable/ic_baseline_delete_outline_24"
+        android:contentDescription="@string/icon" />
+
+    <ImageView
+        android:id="@+id/bin_detail_icon_battery"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bin_item_icon"
+        app:layout_constraintStart_toEndOf="@+id/bin_item_icon"
+        app:srcCompat="@drawable/ic_baseline_battery_full_24"
+        android:contentDescription="@string/icon" />
+
+    <ImageView
+        android:id="@+id/bin_detail_icon_fullness"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bin_item_icon"
+        app:layout_constraintEnd_toStartOf="@+id/bin_item_fullness"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+        android:contentDescription="@string/icon" />
+
+    <TextView
+        android:id="@+id/bin_item_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bin_item_icon"
+        app:layout_constraintTop_toTopOf="@+id/bin_item_icon"
+        tools:text="56.193286, 10.1898285" />
+
+    <TextView
+        android:id="@+id/bin_item_battery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bin_item_icon"
+        app:layout_constraintStart_toEndOf="@+id/bin_detail_icon_battery"
+        tools:text="12.5%" />
+
+    <TextView
+        android:id="@+id/bin_item_fullness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bin_item_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="99.9%" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
